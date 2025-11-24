@@ -1,0 +1,37 @@
+# Chatbot Configuration File
+
+# Sentiment Analysis Settings
+sentiment:
+  analyzer_type: "vader"  # Options: vader, textblob, transformers
+  model_name: "distilbert-base-uncased-finetuned-sst-2-english"  # For transformers only
+
+# Chatbot Settings
+chatbot:
+  name: "Assistant"
+  personality: "helpful"
+
+# UI Settings
+ui:
+  use_colors: true
+  show_timestamps: false
+  show_confidence_scores: true
+
+# Data Persistence
+data:
+  save_conversations: true
+  export_format: "json"  # Options: json, csv, both
+  data_directory: "data"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "logs/chatbot.log"
+
+# Features
+features:
+  real_time_sentiment: true  # Tier 2: Show sentiment for each message
+  trend_analysis: true  # Tier 2: Analyze sentiment trends
+  emotion_detection: false  # Bonus: Detect specific emotions
+  visualization: true  # Bonus: Real-time sentiment visualization
+  export_reports: true  # Bonus: Export conversation reports
+
